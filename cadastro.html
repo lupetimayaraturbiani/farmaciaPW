@@ -42,58 +42,61 @@
         </nav>
     </header>
     <main>
-        <div class="m-3">
-            <form class="p-5">
-                <div class="form-group">
-                    <label for="formGroupCadastroNome">Nome Completo</label>
-                    <input type="text" id="formGroupCadastroNome" class="form-control" id="formGroupCadastroNome"
-                        placeholder="José Bezerra da Silva" required>
-                </div>
-                <div class="form-group">
-                    <label for="formGroupCadastroDataNasc">Data de Nascimento</label>
-                    <input type="date" id="formGroupCadastroDataNasc" class="form-control"
-                        id="formGroupCadastroDataNasc" placeholder="dd/mm/aaaa">
-                </div>
-                <div class="form-group">
-                    <label class="formGroupCadastroCPF">CPF</label>
-                    <input type="text" id="formGroupCadastroCPF" class="form-control" placeholder="447.687.114-00"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="formGroupCadastroEmail">E-mail</label>
-                    <input type="text" id="formGroupCadastroEmail" class="form-control" id="formGroupLoginEmail"
-                        placeholder="exemplo@email.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="formGroupCadastroCel">Celular</label>
-                    <input type="text" id="formGroupCadastroCel" class="form-control" placeholder="(11)93154-4481"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="formGroupCadastroSenha">Senha</label>
-                    <input type="password" id="formGroupCadastroSenha" name="formGroupCadastroSenha"
-                        class="form-control" id="formGroupLoginSenha" placeholder="********" required>
-                </div>
-                <div class="form-group">
-                    <label for="formGroupCadastroConfirmaSenha">Confirme a Senha</label>
-                    <input type="password" class="form-control" id="formGroupCadastroConfirmaSenha"
-                        placeholder="********" required pattern=".{6,}"
-                        title="A senhas precisam ser iguais e ter pelo menos 6 caracteres"
-                        oninput="this.setCustomValidity(this.value != document.getElementById('formGroupCadastroSenha').value ? 'As senhas precisam coincidir.' : '')">
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
-                        Aceito receber e-mails com ofertas, promoções e novidades, além de informações sobre produtos e
-                        serviços
-                        da farmácia. Entendo que posso cancelar minha inscrição a qualquer momento.
-                    </label>
-                </div>
-                <div class="buttons">
-                    <button type="submit" class="btn btn-primary mt-2">Cadastrar</button>
-                </div>
-
-            </form>
+        <div class="container my-4">
+            <h1 class="mt-3" style="text-align: center;">Cadastro</h1>
+            <div class="m-3">
+                <form class="p-5">
+                    <div class="form-group">
+                        <label for="formGroupCadastroNome">Nome Completo</label>
+                        <input type="text" id="formGroupCadastroNome" class="form-control" id="formGroupCadastroNome"
+                            placeholder="José Bezerra da Silva" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupCadastroDataNasc">Data de Nascimento</label>
+                        <input type="date" id="formGroupCadastroDataNasc" class="form-control"
+                            id="formGroupCadastroDataNasc" placeholder="dd/mm/aaaa">
+                    </div>
+                    <div class="form-group">
+                        <label class="formGroupCadastroCPF">CPF</label>
+                        <input type="text" id="formGroupCadastroCPF" class="form-control" placeholder="447.687.114-00"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupCadastroEmail">E-mail</label>
+                        <input type="text" id="formGroupCadastroEmail" class="form-control" id="formGroupLoginEmail"
+                            placeholder="exemplo@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupCadastroCel">Celular</label>
+                        <input type="text" id="formGroupCadastroCel" class="form-control" placeholder="(11)93154-4481"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupCadastroSenha">Senha</label>
+                        <input type="password" id="formGroupCadastroSenha" name="formGroupCadastroSenha"
+                            class="form-control" id="formGroupLoginSenha" placeholder="********" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupCadastroConfirmaSenha">Confirme a Senha</label>
+                        <input type="password" class="form-control" id="formGroupCadastroConfirmaSenha"
+                            placeholder="********" required pattern=".{6,}"
+                            title="A senhas precisam ser iguais e ter pelo menos 6 caracteres"
+                            oninput="this.setCustomValidity(this.value != document.getElementById('formGroupCadastroSenha').value ? 'As senhas precisam coincidir.' : '')">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Aceito receber e-mails com ofertas, promoções e novidades, além de informações sobre produtos e
+                            serviços
+                            da farmácia. Entendo que posso cancelar minha inscrição a qualquer momento.
+                        </label>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="btn btn-primary mt-2">Cadastrar</button>
+                    </div>
+    
+                </form>
+            </div>
         </div>
     </main>
 
