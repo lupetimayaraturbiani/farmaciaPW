@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Carrinho</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="inicio.html">
+                <img src="./img/Farmais-logo.png" alt="Carrinho" width="130" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+                aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ofertas.html">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="carrinho.html">
+                            <img src="./img/carrinho.png" alt="Carrinho" width="30" height="30">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container my-5">
+        <h2>Carrinho de Compras</h2>
+        <div id="cart-items" class="row">
+            <!--onde os itens do carrinho vão carregar(se tiver algum item)-->
+        </div>
+        <div class="my-4>">
+            <h4>Entrega</h4>
+            <form id="frete-form" onsubmit="calcularFrete(event)">
+                <div class="mb-3">
+                    <label for="CEP" class="form-label">CEP:</label>
+                    <input type="text" class="form-control" id="cep" placeholder="01100010" required maxlength="8">
+                </div>
+                <div class="mb-3">
+                    <label for="rua" class="form-label">Rua:</label>
+                    <input type="text" class="form-control" id="txt-rua" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="bairro" class="form-label">Bairro:</label>
+                    <input type="text" class="form-control" id="txt-bairro" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="cidade" class="form-label">Cidade:</label>
+                    <input type="text" class="form-control" id="txt-cidade" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="num" class="form-label">Número:</label>
+                    <input type="text" class="form-control" id="num" required>
+                </div>
+            </form>
+        </div>
+
+        <div id="payment-section" class="my-4" style="display: none;">
+            <h4>Forma de Pagamento</h4>
+            <form id="payment-form">
+                <div class="mb-3">
+                    <label for="num-cartao" class="form-label">Número do Cartão</label>
+                    <input type="text" class="form-control" id="num-cartao" placeholder="0000 0000 0000 0000" required>
+                </div>
+                <div class="mb-3">
+                    <label for="data-validade" class="form-label">Data de Validade</label>
+                    <input type="text" class="form-control" id="data-validade" placeholder="MM/AA" required>
+                </div>
+                <div class="mb-3">
+                    <label for="cvv" class="form-label">Código de Segurança</label>
+                    <input type="text" class="form-control" id="cvv" placeholder="111" required>
+                </div>
+            </form>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <button id="checkout-compra" class="btn btn-danger w-50" style="display: none;"
+                onclick="finalizarCompra()">Finalizar
+                Compra</button>
+        </div>
+    </div>
+    <footer class="bg-dark text-light pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Institucional</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Sobre a Farmácia</a></li>
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5>Atendimento ao Cliente</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Televendas 4003-5577</a></li>
+                        <li><a href="#">Fale Conosco</a></li>
+                        <li><a href="#">Nossas Lojas</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5>Principais Categorias</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Medicamentos</a></li>
+                        <li><a href="#">Beleza e Higiene</a></li>
+                        <li><a href="#">Vitaminas e Suplementos</a></li>
+                        <li><a href="#">Produtos Infantis</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5>Redes Sociais</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-facebook">
+                                    <img src="./img/facebook (1).png" width="30" height="30">
+                            </a>
+                        </li>
+                        <li class="list-inline-item"></li>
+                        <a href="#"><i class="fab fa-facebook">
+                                <img src="./img/instagram (1).png" width="30" height="30">
+                        </a>
+                        </li>
+                        <li class="list-inline-item"></li>
+                        <a href="#"><i class="fab fa-facebook">
+                                <img src="./img/youtube-play.png" width="40" height="40">
+                        </a>
+                        </li>
+                        <li class="list-inline-item"></li>
+                        <a href="#"><i class="fab fa-facebook">
+                                <img src="./img/twitter.jpg" width="30" height="30">
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col text-center">
+                    <p>&copy; 2024 FARMAIS - Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="carrinho.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

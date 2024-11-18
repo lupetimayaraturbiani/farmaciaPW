@@ -9,6 +9,8 @@ function salvarCadastro()
 
     let dadosUsuario = {nome: nome, dtNas: dtNas, email: email, cel: cel, senha: senha};
 
+    let mensagem = `Usuário cadastrado com sucesso!: \n\nCPF: ${cpf}\nNome: ${nome}\nData Nascimento: ${dtNas}\nEmail: ${email}\nCelular: ${cel}\nSenha: ${senha}\n`;
+
     if (localStorage.getItem(cpf)) 
     {
         alert('Já exite um cadastro com esse CPF, tente novamente');
@@ -17,6 +19,6 @@ function salvarCadastro()
     {
         localStorage.setItem(cpf, JSON.stringify(dadosUsuario));
 
-        alert('Usuário cadastro com sucesso!');
+        alert(mensagem);
     }
 }

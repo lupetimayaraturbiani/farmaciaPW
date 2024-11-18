@@ -1,54 +1,368 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Ofertas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Ofertas</title>
 </head>
+
 <body>
-    
-    <nav class="navbar bg-body-tertiary fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Offcanvas navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <form class="d-flex mt-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="inicio.html">
+        <img src="./img/Farmais-logo.png" alt="Carrinho" width="130" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="inicio.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ofertas.html">Ofertas</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" href="carrinho.html">
+              <img src="./img/carrinho.png" alt="Carrinho" width="30" height="30">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Lenços Umedecidos Natural Baby</h5>
+            <p class="card-text">Práticos e suaves, os lenços umedecidos oferecem limpeza e higiene rápida para adultos
+              e bebês.</p>
+            <img class="card-img-bottom"
+              src="https://drogariacristal.com/media/catalog/product/cache/dc75f304252411b8c602e1e96d99390d/7/8/7896064490856.jpg">
+            <div class="d-flex justify-content-around align-items-center">
+              <h6 class="font-weih">R$11,89
+              </h6>
+              <a href="carrinho.html"
+                onclick="addCarrinho('Lenços Umedecidos Baby', 'Práticos e suaves, os lenços umedecidos oferecem limpeza e higiene rápida para adultos e bebês.', 'R$19,99', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiXKQmVM7Zvc547u6XpJnnM_XX_hArwK3vJA&s')"
+                class="btn btn-primary">Comprar</a>
             </div>
           </div>
         </div>
-      </nav>
-</body>
-</html>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Fraldas Descartáveis Huggies</h5>
+            <p class="card-text">As fraldas descartáveis Huggies oferecem conforto, proteção e alta absorção, mantendo a
+              pele do bebê seca e saudável por mais tempo.
+              <img class="card-img-bottom"
+                src="https://drogariacristal.com/media/catalog/product/cache/dc75f304252411b8c602e1e96d99390d/f/r/fraldas_descart_veis_huggies_supreme_care_mega_xg_26_un.png">
+            <div class="d-flex justify-content-around align-items-center">
+              <h6 class="font-weih">R$39,70
+              </h6>
+              <a href="carrinho.html"
+                onclick="addCarrinho('Fraldas Descartáveis Huggies', 'As fraldas descartáveis Huggies oferecem conforto, proteção e alta absorção, mantendo a pele do bebê seca e saudável por mais tempo.', 'R$39,70', 'https://dmvfarma.vtexassets.com/arquivos/ids/200527-800-auto?v=637955643638170000&width=800&height=auto&aspect=true')"
+                class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Dux Nutrition Multivitamínico</h5>
+            <p class="card-text">Fórmula completa com vitaminas e minerais essenciais para reforçar a imunidade,
+              melhorar a energia e apoiar a saúde geral.
+            </p>
+            <img class="card-img-bottom" src="https://m.media-amazon.com/images/I/51xYS0PdqjL.jpg">
+            <div class="d-flex justify-content-around align-items-center">
+              <h6 class="font-weih">R$29,90
+              </h6>
+              <a href="carrinho.html"
+                onclick="addCarrinho('Dux Nutrition Multivitamínico', 'Fórmula completa com vitaminas e minerais essenciais para reforçar a imunidade, melhorar a energia e apoiar a saúde geral.', 'R$29,90', 'https://images.tcdn.com.br/img/img_prod/1098275/multivitaminico_30_capsulas_dux_742_1_941c0306b1a0666864866bfa30926a73.png')"
+                class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Protetor Solar Facial Creamy - FPS60</h5>
+            <p class="card-text">Oferece alta proteção contra os raios UVA e UVB, com textura leve, toque seco e
+              acabamento invisível na pele.</p>
+            <img class="card-img-bottom"
+              src="https://creamy.vtexassets.com/arquivos/ids/156928/01.png?v=638429151255670000">
+            <div class="d-flex justify-content-around align-items-center">
+              <h6 class="font-weih">R$46,99
+              </h6>
+              <a href="carrinho.html"
+                onclick="addCarrinho('Protetor Solar Facial Creamy - FPS60', 'Oferece alta proteção contra os raios UVA e UVB, com textura leve, toque seco e acabamento invisível na pele.', 'R$46,99', 'https://creamy.vtexassets.com/arquivos/ids/156928/01.png?v=638429151255670000')"
+                class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Hidratante Corporal Nivea</h5>
+            <p class="card-text">Proporciona hidratação intensa e duradoura, deixando a pele macia, suave e protegida ao
+              longo do dia.
+            </p>
+            <img class="card-img-bottom"
+              src="data:image/jpeg;base64,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">
+            <div class="d-flex justify-content-around align-items-center">
+              <h6 class="font-weih">R$32,99
+              </h6>
+              <a href="carrinho.html"
+                onclick="addCarrinho('Hidratante Corporal Nivea', 'Proporciona hidratação intensa e duradoura, deixando a pele macia, suave e protegida ao longo do dia.', 'R$32,99', 'data:image/jpeg;base64,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')"
+                class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Cimegripe Antigripal</h5>
+            <p class="card-text">Alivia os sintomas da gripe, como febre, dores no corpo e congestão nasal,
+              proporcionando bem-estar e conforto.
+            </p>
+            <img class="card-img-bottom"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-e6acorlZ11ZZw1ogTQLGk0F_IlnfmzqG2Q&s">
+            <div class="d-flex justify-content-around align-items-center">
+              <h6 class="font-weih">R$13,69
+              </h6>
+              <a href="carrinho.html"
+                onclick="addCarrinho('Cimegripe Antigripal', 'Alivia os sintomas da gripe, como febre, dores no corpo e congestão nasal, proporcionando bem-estar e conforto.', 'R$13,69', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-e6acorlZ11ZZw1ogTQLGk0F_IlnfmzqG2Q&s')"
+                class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Termomêtro Digital - GTECH</h5>
+            <p class="card-text">Precisão e rapidez na medição da temperatura corporal, com visor fácil de ler e alarme
+              para febre.</p>
+            <img class="card-img-bottom"
+              src="https://images.tcdn.com.br/img/img_prod/1025931/termometro_clinico_digital_portatil_g_tech_341_1_8c00a4fc868781dad168c25b8d4d465b.jpg">
+            <div class="d-flex justify-content-around align-items-center">
+              <h6 class="font-weih">R$28,90
+              </h6>
+              <a href="carrinho.html"
+                onclick="addCarrinho('Termomêtro Digital - GTECH', 'Precisão e rapidez na medição da temperatura corporal, com visor fácil de ler e alarme para febre.', 'R$28,90', 'https://images.tcdn.com.br/img/img_prod/1025931/termometro_clinico_digital_portatil_g_tech_341_1_8c00a4fc868781dad168c25b8d4d465b.jpg')"
+                class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Pasta de Dente - Colgate Tripla Ação</h5>
+            <p class="card-text">Proporciona limpeza profunda, proteção contra cáries e hálito fresco, cuidando da saúde
+              bucal diariamente.
+            </p>
+            <img class="card-img-bottom"
+              src="https://images-americanas.b2w.io/produtos/4726869653/imagens/pasta-de-dentes-colgate-tripla-acao-com-fluor-e-calcio/4726869653_1_large.jpg">
+            <div class="d-flex justify-content-around align-items-center">
+              <h6 class="font-weih">R$17,89
+              </h6>
+              <a href="carrinho.html"
+                onclick="addCarrinho('Pasta de Dente - Colgate Tripla Ação', 'Proporciona limpeza profunda, proteção contra cáries e hálito fresco, cuidando da saúde bucal diariamente.', 'R$17,89', 'https://images-americanas.b2w.io/produtos/4726869653/imagens/pasta-de-dentes-colgate-tripla-acao-com-fluor-e-calcio/4726869653_1_large.jpg')"
+                class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Advil - 8 Capsulas Gelatinosas</h5>
+            <p class="card-text">Analgésico e anti-inflamatório de rápida absorção, alivia dores de cabeça, musculares e
+              febre com praticidade e eficácia.
+            </p>
+            <img class="card-img-bottom"
+              src="https://dmvfarma.vtexassets.com/arquivos/ids/226914/7891045043564_0.jpg?v=638247858957570000">
+            <div class="d-flex justify-content-around align-items-center">
+              <h6 class="font-weih">R$29,09
+              </h6>
+              <a href="carrinho.html"
+                onclick="addCarrinho('Advil - 8 Capsulas Gelatinosas', 'Analgésico e anti-inflamatório de rápida absorção, alivia dores de cabeça, musculares e febre com praticidade e eficácia.', 'R$29,09', 'https://dmvfarma.vtexassets.com/arquivos/ids/226914/7891045043564_0.jpg?v=638247858957570000')"
+                class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Kit Haskell Mandioca Shampoo Condicionador E Máscara</h5>
+            <p class="card-text">Cuida dos cabelos promovendo hidratação profunda, fortalecimento e brilho intenso,
+              ideal para fios opacos e ressecados.</p>
+            <img class="card-img-bottom"
+              src="https://acdn.mitiendanube.com/stores/001/154/387/products/kit-sh-cond-masc-500ml-mandioca-f5c717204a750aae1417019534293634-1024-1024.jpg">
+            <div class="d-flex justify-content-around align-items-center">
+              <h6 class="font-weih">R$109,99
+              </h6>
+              <a href="carrinho.html"
+                onclick="addCarrinho('Kit Haskell Mandioca Shampoo Condicionador e Máscara', 'Cuida dos cabelos promovendo hidratação profunda, fortalecimento e brilho intenso, ideal para fios opacos e ressecados.', 'R$109,99', 'https://acdn.mitiendanube.com/stores/001/154/387/products/kit-sh-cond-masc-500ml-mandioca-f5c717204a750aae1417019534293634-1024-1024.jpg')"
+                class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Sabonete em Barra - Phebo Toque de Lavanda</h5>
+            <p class="card-text">Com fragrância suave e duradoura, limpa e hidrata a pele, proporcionando uma sensação
+              de frescor e bem-estar.
+            </p>
+            <img class="card-img-bottom"
+              src="https://superprix.vteximg.com.br/arquivos/ids/189918-600-600/839000.jpg?v=637320754733070000">
+            <div class="d-flex justify-content-around align-items-center">
+              <h6 class="font-weih">R$9,90
+              </h6>
+              <a href="carrinho.html"
+                onclick="addCarrinho('Sabone em Barra - Phebo Toque de Lavanda', 'Com fragrância suave e duradoura, limpa e hidrata a pele, proporcionando uma sensação de frescor e bem-estar.', 'R$9,90', 'https://superprix.vteximg.com.br/arquivos/ids/189918-600-600/839000.jpg?v=637320754733070000')"
+                class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Álcool em Gel 70% Asseeptgel</h5>
+            <p class="card-text">Produto prático e eficaz para higienizar as mãos, eliminando 99,9% dos germes e
+              bactérias, ideal para proteção no dia a dia.
+            </p>
+            <img class="card-img-bottom"
+              src="https://drogariacristal.com/media/catalog/product/cache/dc75f304252411b8c602e1e96d99390d/7/8/7896064490856.jpg">
+            <div class="d-flex justify-content-around align-items-center">
+              <h6 class="font-weih">R$16,49
+              </h6>
+              <a href="carrinho.html"
+                onclick="addCarrinho('Álcool em gem 70% AsseeptGel', 'Produto prático e eficaz para higienizar as mãos, eliminando 99,9% dos germes e bactérias, ideal para proteção no dia a dia.', 'R$16,49', 'https://drogariacristal.com/media/catalog/product/cache/dc75f304252411b8c602e1e96d99390d/7/8/7896064490856.jpg')"
+                class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-dark text-light pt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>Institucional</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Sobre a Farmácia</a></li>
+            <li><a href="#">Trabalhe Conosco</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+          </ul>
+        </div>
 
+        <div class="col-md-3">
+          <h5>Atendimento ao Cliente</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Central de Ajuda</a></li>
+            <li><a href="#">Televendas 4003-5577</a></li>
+            <li><a href="#">Fale Conosco</a></li>
+            <li><a href="#">Nossas Lojas</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Principais Categorias</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Medicamentos</a></li>
+            <li><a href="#">Beleza e Higiene</a></li>
+            <li><a href="#">Vitaminas e Suplementos</a></li>
+            <li><a href="#">Produtos Infantis</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h5>Redes Sociais</h5>
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="#"><i class="fab fa-facebook">
+                  <img src="./img/facebook (1).png" width="30" height="30">
+              </a>
+            </li>
+            <li class="list-inline-item"></li>
+            <a href="#"><i class="fab fa-facebook">
+                <img src="./img/instagram (1).png" width="30" height="30">
+            </a>
+            </li>
+            <li class="list-inline-item"></li>
+            <a href="#"><i class="fab fa-facebook">
+                <img src="./img/youtube-play.png" width="40" height="40">
+            </a>
+            </li>
+            <li class="list-inline-item"></li>
+            <a href="#"><i class="fab fa-facebook">
+                <img src="./img/twitter.jpg" width="30" height="30">
+            </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col text-center">
+          <p>&copy; 2024 FARMAIS - Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function addCarrinho(nome, descricao, preco, img) {
+      let cartItem = {
+        nome: nome,
+        descricao: descricao,
+        preco: preco,
+        img: img
+      };
+
+      localStorage.setItem('cartItem', JSON.stringify(cartItem));
+
+      document.getElementById('cart-link').click();
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

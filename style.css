@@ -37,12 +37,21 @@ form{
     border-radius: 3em;
 }
 
-.buttons{
+.buttons{ 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.btn{
-    width: 7em;
+
+
+.row{
+    margin: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    border-radius: 30px;
+    text-align: center;
 }
